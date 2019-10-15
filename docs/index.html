@@ -1,0 +1,71 @@
+<style>html {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /* font-family: 'Roboto'; */
+  font-family: 'Manjari', sans-serif;
+}
+#dummy_for_se {
+  display: none;
+}
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+.spinner {
+  position:relative;
+  width: 100%;
+  height: 100%;
+}
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #999;
+  border-top-color: #000;
+  animation: spinner .6s linear infinite;
+}
+.w-spinner {
+  position:relative;
+  display:inline-block;
+  top: 7px;
+  width:20px;
+  height:20px;
+  margin-right: 8px;
+}
+.layer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  align-items: center;
+  justify-content: center;
+}</style><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/tensorflow.js-classification-example/favicon.ico><link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel=stylesheet><meta name=description content="web application(SPA) for tensorflow.js classification"><title>tensorflow.js-classification-example</title><link href=/tensorflow.js-classification-example/css/app.b7e0d1f5.css rel=preload as=style><link href=/tensorflow.js-classification-example/js/app.3153e214.js rel=preload as=script><link href=/tensorflow.js-classification-example/js/chunk-vendors.5b2581db.js rel=preload as=script><link href=/tensorflow.js-classification-example/css/app.b7e0d1f5.css rel=stylesheet><link href=/tensorflow.js-classification-example/css/app.70a8d689.css rel=preload as=style><link href=/tensorflow.js-classification-example/js/app.df62a089.js rel=preload as=script><link href=/tensorflow.js-classification-example/js/chunk-vendors.0532bdd8.js rel=preload as=script><link href=/tensorflow.js-classification-example/css/app.70a8d689.css rel=stylesheet></head><body><noscript><strong>We're sorry but tensorflow.js-classification-example doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=dummy_for_se></div><div id=app></div><div class=layer><div><div class=w-spinner><div class=spinner v-show="layer.errorMessage == ''"></div></div><span></span></div></div><script src=/tensorflow.js-classification-example/js/chunk-vendors.0532bdd8.js></script><script src=/tensorflow.js-classification-example/js/app.df62a089.js></script></body><script src=https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js></script><script>const TENSORFLOWJS_SRC = "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2.9/dist/tf.min.js"
+  let script = document.createElement('script')
+  script.onload = function () {
+    document.querySelector('body > .layer').style.display = 'none'
+  }
+  script.onerror = function () {
+    document.querySelector('body > .layer .w-spinner').style.display = 'none'
+    document.querySelector('body > .layer span').innerHTML = '<span style="color:rgb(250, 0, 0);">failed to load tensorflow.js from </span>' + '<i style="color:rgb(0, 0, 250);">' + TENSORFLOWJS_SRC + '</i>'
+  }
+  document.querySelector('body > .layer span').innerHTML = `load tensorflow.js from ` + '<i style="color:rgb(0, 0, 250);">' + TENSORFLOWJS_SRC + '</i>'
+  script.src = TENSORFLOWJS_SRC
+  document.head.appendChild(script)</script></html>

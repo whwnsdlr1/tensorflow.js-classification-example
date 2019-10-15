@@ -1,0 +1,56 @@
+{
+  "table": {
+    "head": [
+      "Layer (type)",
+      "Output Shape",
+      "Param #"
+    ],
+    "body": [
+      [
+        "0 (InputLayer)",
+        "[(None, 28, 28, 1)]",
+        "0"
+      ],
+      [
+        "1 (Conv2D)",
+        "(None, 28, 28, 16)",
+        "160"
+      ],
+      [
+        "2 (MaxPooling2D)",
+        "(None, 14, 14, 16)",
+        "0"
+      ],
+      [
+        "3 (Conv2D)",
+        "(None, 14, 14, 32)",
+        "4640"
+      ],
+      [
+        "4 (MaxPooling2D)",
+        "(None, 7, 7, 32)",
+        "0"
+      ],
+      [
+        "5 (Flatten)",
+        "(None, 1568)",
+        "0"
+      ],
+      [
+        "6 (Dense)",
+        "(None, 40)",
+        "62760"
+      ],
+      [
+        "7 (Dense)",
+        "(None, 10)",
+        "410"
+      ]
+    ]
+  },
+  "comment": {
+    "Total params": "67,970",
+    "Trainable params": "67,970",
+    "Non-trainable params": "0"
+  }
+}
