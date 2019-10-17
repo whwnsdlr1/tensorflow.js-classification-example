@@ -91,7 +91,7 @@
         <br />
         &nbsp;&nbsp;ML model은 블랙박스로 사용할 수 있지만 세밀한 튜닝을 위해서는 이해가 필요하다.
         특히 classification 문제의 경우 모델이 도대체 무엇을 보고 그런 결정을 판단하는지 확인 할 필요가 있다.
-        이런 "visual explanations"을 producing하는 방법은 occlusion map, Guided-Backpropagation, CAM, Grad-CAM등이 있으며 Grad-CAM의 경우 구조변경과 재학습이 필요 없으며 판단을 내리기 위해 참고한 영역을 표현 할 수 있다.  
+        이런 "visual explanations"을 producing하는 방법은 occlusion map, Guided-Backpropagation, CAM, Grad-CAM등이 있고 Grad-CAM의 경우 구조변경과 재학습이 필요 없으며 판단을 내리기 위해 참고한 영역을 표현 할 수 있다.  
       </p>
     </div>
   </div>
