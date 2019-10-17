@@ -45,18 +45,10 @@ export default {
         MISC.createElement('SPAN', {...styleSpan, fontWeight: 'bold', paddingRight: '10px'}, {parent: div, text: `${key}:`})
         MISC.createElement('SPAN', styleSpan, {parent: div, text: tf.version[key]})
       }
-      MISC.createElement('H3', {fontSize: '20px', marginTop: '30px', marginBottom: '0px'}, {parent: dom, text: 'Author'})
+      MISC.createElement('H3', {fontSize: '20px', marginTop: '30px', marginBottom: '0px'}, {parent: dom, text: 'used library'})
       MISC.createElement('HR', {}, {parent: dom})
-      for (let el of [{head: 'id', type: 'span', text: 'whwnsdlr1 (Junik Jo)'}, {head: 'github', type: 'a', text:'https://github.com/whwnsdlr1'}, {head: 'mail', type: 'mail', text:'whwnsdlr1@naver.com'}]) {
-        let div = MISC.createElement('DIV', {}, {parent: dom})
-        MISC.createElement('SPAN', {...styleSpan, fontWeight: 'bold', paddingRight: '10px'}, {parent: div, text: `${el.head}:`})
-        if (el.type == 'span')
-          MISC.createElement('SPAN', styleSpan, {parent: div, text: el.text})
-        else if (el.type == 'a')
-          MISC.createElement('A', styleSpan, {parent: div, text: el.text, attrs: {href: el.text}})
-        else if (el.type == 'mail')
-          MISC.createElement('A', styleSpan, {parent: div, text: el.text, attrs: {href: `mailto:${el.text}`}})
-      }
+      let div = MISC.createElement('DIV', {}, {parent: dom})
+      MISC.createElement('SPAN', styleSpan, {parent: div, text: 'please see the readme file on github.'})
       this.$mModal.show('dialog', {
         dom: dom,
         buttons: [

@@ -6,7 +6,7 @@
 <script>
 export default {
   mounted () {
-    this.$router.push('/mnist')
+    this.$router.push('/tensorflow.js-classification-example/mnist')
   }
 }
 </script>

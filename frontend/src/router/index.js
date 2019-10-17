@@ -7,8 +7,8 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: '/mnist', component: Main },
-    { path: '/imagenet', component: Main },
+    { path: '/tensorflow.js-classification-example/mnist', component: Main },
+    { path: '/tensorflow.js-classification-example/imagenet', component: Main },
     { path: '*', component: Index }
   ],
   mode: 'history'
