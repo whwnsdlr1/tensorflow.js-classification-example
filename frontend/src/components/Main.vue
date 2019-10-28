@@ -89,9 +89,9 @@
       <p>
         Gradient-weighted Class Activation Mapping
         <br />
-        &nbsp;&nbsp;ML model은 블랙박스로 사용할 수 있지만 세밀한 튜닝을 위해서는 이해가 필요하다.
-        특히 classification 문제의 경우 모델이 도대체 무엇을 보고 그런 결정을 판단하는지 확인 할 필요가 있다.
-        이런 "visual explanations"을 producing하는 방법은 occlusion map, Guided-Backpropagation, CAM, Grad-CAM등이 있고 Grad-CAM의 경우 구조변경과 재학습이 필요 없으며 판단을 내리기 위해 참고한 영역을 표현 할 수 있다.  
+        &nbsp;&nbsp;ML models can be used as black boxes, but detailed tuning requires understanding.
+        In particular, for the classification problem, it is necessary to identify what the model sees and determines such a decision.
+        Methods for procuring these "visual plans" include occlusion map, Guided-Backpropagation, CAM, Grid-CAM etc. and in the case of the Grad-CAM, no structural changes and re-learning are required and the areas referred to are expressed to make a judgment. 
       </p>
     </div>
   </div>
@@ -139,22 +139,23 @@ export default {
           },
           trainingData: {
             name: 'MNIST',
-            html: `&nbsp;&nbsp;MNIST database<i>(Modified National Institute of Standards and Technology database)</i>는 숫자 필기체 이미지 데이터베이스 이다.
+            html: `&nbsp;&nbsp;MNIST database<i>(Modified National Institute of Standards and Technology database)</i>is the base of the numeric cursive image data.
                   <br />
-                  &nbsp;&nbsp;이미지는 28 x 28 사이즈의 gray scale이며 학습 데이터 60000장, 테스트 데이터 10000장으로 구성 되어있다. 클래스는 0 부터 9까지 총 10개 이다.
+                  &nbsp;&nbsp;The image is 28x28 size of gray scale consisting of 60000 learning data and 10000 test data. There are 10 classess from 0 to 9.
                   <br />
-                  &nbsp;&nbsp;분류 난이도가 쉬운 편이고 필요한 모델의 용량도 작은 편이며 오랫동안 축척된 벤치마크가 있어서 처음 머신러닝을 접하는 사람들이 이용하기 좋은 데이터셋이다.
+                  &nbsp;&nbsp;It is easy to classify, and the capacity of the required models are small. And there are big-scale benchmarks, which make it a good dataset for first-time machine-learning users.
+
                   <br />
-                  &nbsp;&nbsp;깊은 네트워크 구조 + augmentation + 앙상블들을 이용하면 99.79% 이상의 정확도 까지 얻을 수 있다.<i>(<a href="https://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html#4d4e495354">MNIST - who is the best in MNIST</a>)</i>
+                  &nbsp;&nbsp;Deep network architecture + augmentation +use ensembles ,you can get more than 99.79% accuracy. <i>(<a href="https://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html#4d4e495354">MNIST - who is the best in MNIST</a>)</i>
                   `
           },
           training: {
             name: 'Training',
-            html: `&nbsp;&nbsp;keras&tensorflow를 이용한 모델 정의는 <a href="https://github.com/whwnsdlr1/tensorflow.js-classification-example/train/custom_cnn/model.py">https://github.com/whwnsdlr1/tensorflow.js-classification-example/train/custom_cnn/model.py</a> 파일에
-                  학습 코드는 <a href="https://github.com/whwnsdlr1/tensorflow.js-classification-example/train/custom_cnn/train.py">https://github.com/whwnsdlr1/tensorflow.js-classification-example/train/custom_cnn/train.py</a>에서 찾을 수 있다.
+            html: `&nbsp;&nbsp;keras&tensorflow model is <a href="https://github.com/whwnsdlr1/tensorflow.js-classification-example/train/custom_cnn/model.py">https://github.com/whwnsdlr1/tensorflow.js-classification-example/train/custom_cnn/model.py</a> 
+                 file learning code can be find in <a href="https://github.com/whwnsdlr1/tensorflow.js-classification-example/train/custom_cnn/train.py">https://github.com/whwnsdlr1/tensorflow.js-classification-example/train/custom_cnn/train.py</a>
                   <br /><br />
-                  &nbsp;&nbsp;60000장의 학습 데이터를 다시 50000장과 10000장의 학습, 검증 데이터로 나눴다.
-                  &nbsp;&nbsp;아래의 하이퍼파리미터로 학습 하였고 검증 데이터에 대해서 가장 낮은 loss를 가지는 epoch 모델을 저장하였다.
+                  &nbsp;&nbsp;It has divided again learning data into 50000 chapters and 10000 pages of learning and verification data.
+                  &nbsp;&nbsp;We learned from the hyperparameters below, for verification data was saved with the following hyperparameters.
                   <br />
                   &nbsp;&nbsp;&nbsp;&nbsp;optimizer: adam
                   <br />
@@ -166,8 +167,8 @@ export default {
                   <br />
                   &nbsp;&nbsp;&nbsp;&nbsp;epochs: 100 // but with early stoppping, learning process stopped at epoch-17
                   <br />
-                  &nbsp;&nbsp;학습에는 i7-8700 CPU / tensorflow 2.0이 사용되었고 3분에 채 안걸렸다.
-                  &nbsp;&nbsp;최종 모델의 학습 데이터에 대한 accuracy는 0.9979, 검증 데이터는 0.9886, 테스트 데이터는 0.9907였다.
+                  &nbsp;&nbsp;i7-8700 CPU / tensorflow 2.0 were used to learning and took no more than three minutes.
+                  &nbsp;&nbsp;The accuracy for the learning data of the final model was 0.9979, the verification data was 0.9886 and the test data was 0.9907.
                   `
           },
           archetecture: {
@@ -207,20 +208,21 @@ export default {
           },
           trainingData: {
             name: 'Imagenet',
-            html: `&nbsp;&nbsp;이미지넷은 인터넷에 있는 다양한 이미지들을 모아서 만든 데이터 셋으로 총 이미지 14M, 클래스 21841로 구성 되어있다.
-                  통상 머신러닝에서 이미지넷이라고 하면 전체 데이터셋가 아닌 ILSVRC2012<i>(Large Scale Visual Recognition Challenge 2012)</i>에서 정제한 하위 데이터셋을 의미한다.
-                  IRSLV2012 데이터의 경우 클래스는 1000개 이며 학습 이미지는 이미지넷에서 가져온 이미지 1.2M개, 검증 및 테스트 데이터는 기존 이미지넷과 겹치지 않는 이미지들을 인터넷에서 수집하였다.
+            html: `&nbsp;&nbsp;ImageNet consists of a total of 14M, class 21841, data set that is composed of various images from the Internet.
+                 In machine learning, the term imagenet usually refers to the sub-data set corrected in ILSVRC2012<i>(Large Scale Visual Recognition Challenge 2012)</i> rather than the entire dataset.
+                  For the IRSLV2012 data, there are 1000 classes, and the learning images are 1.2M images taken from the image net, and the verification and test data are collected from the Internet without overlap with the existing image net.
                   <br />
-                  &nbsp;&nbsp;이 데이터셋은 다양한 클래스에 대해서 많은 양의 데이터로 구성 되어 있으므로 데이터가 부족한 학습 문제 해결을 위한 transfer learning에 많이 이용되는 데이터셋이다.
-                  transper learning은 모달리티가 유사하다면<i>(natural scene, picture, medical...)</i> 특징을 표현, 추출하는 방법이 비슷할 것이라고 가정하여 이미지넷으로 먼저 학습하고 문제의 데이터로 파인튜닝하여 일반화에러를 줄이는 방법이다.
+                  &nbsp;&nbsp;This dataset consists of a large amount of data for various classes, so it is often used for transfer learning to solve data-poor learning problems.
+                 Transfer learning is a method to reduce generalization by learning first with image net and fine-tuning with the data in question, assuming that the method of expressing and extracting the characteristics of natal scene( picture, medical...)</i> if modality is similar.
                   `
           },
           training: {
             name: 'Training',
             html: `
-                  &nbsp;&nbsp;학습은 직접하지 않았고 모델 구조 및 weight 모두 Tiny Darknet을 사용하였다. 자세한 내용은 <a href="https://pjreddie.com/darknet/tiny-darknet/">https://pjreddie.com/darknet/tiny-darknet/</a>에서 볼 수 있다.
+                  &nbsp;&nbsp;Learning was not done directly and both the model structure and weight used Tiny Darknet. For more information, see a href="https://pjreddie.com/darknet/tiny-darknet/">https://pjreddie.com/darknet/tiny-darknet/</a>.
+
                   <br />
-                  &nbsp;&nbsp;darknet (only classify model) to keras model 변환 코드는 <a href="https://github.com/whwnsdlr1/tensorflow.js-classification-example/train/darknet_tiny/convert.py">convert.py</a>에서 확인 할 수 있다.
+                  &nbsp;&nbsp;you can confirm darknet (only classify model) to keras model conversion code in<a href="https://github.com/whwnsdlr1/tensorflow.js-classification-example/train/darknet_tiny/convert.py">convert.py</a>
                   `
           },
           archetecture: {
