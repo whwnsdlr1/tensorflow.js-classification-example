@@ -91,7 +91,7 @@
         <br />
         &nbsp;&nbsp;ML models can be used as black boxes, but detailed tuning requires understanding.
         In particular, for the classification problem, it is necessary to identify what the model sees and determines such a decision.
-        Methods for procuring these "visual plans" include occlusion map, Guided-Backpropagation, CAM, Grid-CAM etc. and in the case of the Grad-CAM, no structural changes and re-learning are required and the areas referred to are expressed to make a judgment. 
+        Methods for procuring these "visual plans" include occlusion map, Guided-Backpropagation, CAM, Grad-CAM etc. and in the case of the Grad-CAM, no structural changes and re-learning are required and the areas referred to are expressed to make a judgment. 
       </p>
     </div>
   </div>
