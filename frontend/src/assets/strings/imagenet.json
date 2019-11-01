@@ -4,7 +4,7 @@
     "tag": "training-data",
     "html": {
       "EN": [
-        "<img src='/imagenet/imagenet.png' />",
+        "<img src='/tensorflow.js-classification-example/imagenet/imagenet.png' />",
         "",
         "<a href='http://www.image-net.org/'>ImageNet</a> consists of a total of 14M, class 21841, data set that is composed of various images from the Internet.",
         "In machine learning, the term imagenet usually refers to the sub-data set corrected in <a href='http://www.image-net.org/challenges/LSVRC/2012/'>ILSVRC2012</a><i>(Large Scale Visual Recognition Challenge 2012)</i> rather than the entire dataset.",
@@ -13,7 +13,7 @@
         "Transfer learning is a method to reduce generalization by learning first with image net and fine-tuning with the data in question, assuming that the method of expressing and extracting the characteristics of natal scene<i>(picture, medical...)</i> if modality is similar."
       ],
       "KO": [
-        "<img src='/imagenet/imagenet.png' />",
+        "<img src='/tensorflow.js-classification-example/imagenet/imagenet.png' />",
         "",
         "<a href='http://www.image-net.org/'>ImageNet</a>은 인터넷에 있는 다양한 이미지들을 모아서 만든 데이터 셋으로 총 이미지 14M, 클래스 21841로 구성 되어있다.",
         "통상 머신러닝에서 이미지넷이라고 하면 전체 데이터셋가 아닌 <a href='http://www.image-net.org/challenges/LSVRC/2012/'>ILSVRC2012</a><i>(Large Scale Visual Recognition Challenge 2012)</i>에서 정제한 하위 데이터셋을 의미한다.",

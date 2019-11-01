@@ -4,7 +4,7 @@
     "tag": "training-data",
     "html": {
       "EN": [
-        "<img src='/mnist/mnist.png' />",
+        "<img src='/tensorflow.js-classification-example/mnist/mnist.png' />",
         "",
         "<a href='http://yann.lecun.com/exdb/mnist/'>MNIST database</a><i>(Modified National Institute of Standards and Technology database)</i>is the base of the numeric cursive image data.",
         "The image is 28x28 size of gray scale consisting of 60000 learning data and 10000 test data. There are 10 classess from 0 to 9.",
@@ -12,7 +12,7 @@
         "Deep network architecture + augmentation + use ensembles ,you can get more than 99.79% accuracy. <i>(<a href='https://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html#4d4e495354'>MNIST - who is the best in MNIST</a>)</i>"
       ],
       "KO": [
-        "<img src='/mnist/mnist.png' />",
+        "<img src='/tensorflow.js-classification-example/mnist/mnist.png' />",
         "",
         "<a href='http://yann.lecun.com/exdb/mnist/'>MNIST database</a><i>(Modified National Institute of Standards and Technology database)</i>는 숫자 필기체 이미지로 구성된 database이다.",
         "이미지는 28 x 28 사이즈의 gray scale이며 학습 데이터 60000장, 테스트 데이터 10000장으로 구성 되어있다. 클래스는 0 부터 9까지 총 10개 이다.",

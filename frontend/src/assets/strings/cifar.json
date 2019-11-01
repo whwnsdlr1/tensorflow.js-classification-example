@@ -4,7 +4,7 @@
     "tag": "training-data",
     "html": {
       "EN": [
-        "<img src='/cifar/cifar.png' />",
+        "<img src='/tensorflow.js-classification-example/cifar/cifar.png' />",
         "",
         "<a href='https://www.cs.toronto.edu/~kriz/cifar.html'>CIFAR-100 dataset</a> is subset of <a href='http://groups.csail.mit.edu/vision/TinyImages/'>80 million tiny images</a> and consists of 60000 32x32 Color images, of which 50000 are training and the remaining 10000 are test data.",
         "Each image belongs to one of 100 classes and there are 600 images in each class. 100 classes have 20 super classes, and the class names are shown in the table below.",
@@ -33,7 +33,7 @@
         "<a href='https://arxiv.org/pdf/1905.11946v2.pdf'>EfficientNet: Rethinking Model Scailing for Convolutional Neural Networks</a>, released in 2019, showed a 91.7% SOTA accuracy."
       ],
       "KO": [
-        "<img src='/cifar/cifar.png' />",
+        "<img src='/tensorflow.js-classification-example/cifar/cifar.png' />",
         "",
         "<a href='https://www.cs.toronto.edu/~kriz/cifar.html'>CIFAR-100 dataset</a>은 <a href='http://groups.csail.mit.edu/vision/TinyImages/'>80 million tiny images</a>의 하위 dataset으로 60000장의 32x32 Color image로 구성되어 있으며 이 중 50000장은 학습, 나머지 10000장은 테스트데이터이다.",
         "각 이미지는 100개의 클래스 중 하나에 속하며 각 클래스 당 600개의 이미지가 존재한다. 100개의 클래스는 20개의 상위 클래스가 있으며 클래스명은 아래 테이블과 같다.",
