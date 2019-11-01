@@ -1,0 +1,349 @@
+{
+  "trainingData": {
+    "name": "Imagenet",
+    "tag": "training-data",
+    "html": {
+      "EN": [
+        "<img src='/imagenet/imagenet.png' />",
+        "",
+        "<a href='http://www.image-net.org/'>ImageNet</a> consists of a total of 14M, class 21841, data set that is composed of various images from the Internet.",
+        "In machine learning, the term imagenet usually refers to the sub-data set corrected in <a href='http://www.image-net.org/challenges/LSVRC/2012/'>ILSVRC2012</a><i>(Large Scale Visual Recognition Challenge 2012)</i> rather than the entire dataset.",
+        "For the IRSLV2012 data, there are 1000 classes, and the learning images are 1.2M images taken from the image net, and the verification and test data are collected from the Internet without overlap with the existing image net.",
+        "This dataset consists of a large amount of data for various classes, so it is often used for transfer learning to solve data-poor learning problems.",
+        "Transfer learning is a method to reduce generalization by learning first with image net and fine-tuning with the data in question, assuming that the method of expressing and extracting the characteristics of natal scene<i>(picture, medical...)</i> if modality is similar."
+      ],
+      "KO": [
+        "<img src='/imagenet/imagenet.png' />",
+        "",
+        "<a href='http://www.image-net.org/'>ImageNet</a>은 인터넷에 있는 다양한 이미지들을 모아서 만든 데이터 셋으로 총 이미지 14M, 클래스 21841로 구성 되어있다.",
+        "통상 머신러닝에서 이미지넷이라고 하면 전체 데이터셋가 아닌 <a href='http://www.image-net.org/challenges/LSVRC/2012/'>ILSVRC2012</a><i>(Large Scale Visual Recognition Challenge 2012)</i>에서 정제한 하위 데이터셋을 의미한다.",
+        "IRSLV2012 데이터의 경우 클래스는 1000개 이며 학습 이미지는 이미지넷에서 가져온 이미지 1.2M개, 검증 및 테스트 데이터는 기존 이미지넷과 겹치지 않는 이미지들을 인터넷에서 수집하였다.",
+        "이 데이터셋은 다양한 클래스에 대해서 많은 양의 데이터로 구성 되어 있으므로 학습 데이터가 부족한 문제 해결을 위한 transfer learning에 많이 이용되는 데이터셋이다.",
+        "transper learning은 모달리티가 유사하다면<i>(natural scene, picture, medical...)</i> 특징을 표현, 추출하는 방법이 비슷할 것이라고 가정하여 이미지넷으로 먼저 학습하고 문제의 데이터로 fine-tuning하여 일반화에러를 줄이는 방법이다."
+      ]
+    }
+  },
+  "archetecture": {
+    "name": "Tiny Darknet",
+    "tag": "network archetecture",
+    "data": {
+      "table": {
+        "head": [
+          "Layer (type)",
+          "Output Shape",
+          "Param #"
+        ],
+        "body": [
+          [
+            "0 (InputLayer)",
+            "[(1, 224, 224, 3)]",
+            "0"
+          ],
+          [
+            "1 (Conv2D)",
+            "(1, 224, 224, 16)",
+            "432"
+          ],
+          [
+            "2 (BatchNormalization)",
+            "(1, 224, 224, 16)",
+            "64"
+          ],
+          [
+            "3 (LeakyReLU)",
+            "(1, 224, 224, 16)",
+            "0"
+          ],
+          [
+            "4 (MaxPooling2D)",
+            "(1, 112, 112, 16)",
+            "0"
+          ],
+          [
+            "5 (Conv2D)",
+            "(1, 112, 112, 32)",
+            "4608"
+          ],
+          [
+            "6 (BatchNormalization)",
+            "(1, 112, 112, 32)",
+            "128"
+          ],
+          [
+            "7 (LeakyReLU)",
+            "(1, 112, 112, 32)",
+            "0"
+          ],
+          [
+            "8 (MaxPooling2D)",
+            "(1, 56, 56, 32)",
+            "0"
+          ],
+          [
+            "9 (Conv2D)",
+            "(1, 56, 56, 16)",
+            "512"
+          ],
+          [
+            "10 (BatchNormalization)",
+            "(1, 56, 56, 16)",
+            "64"
+          ],
+          [
+            "11 (LeakyReLU)",
+            "(1, 56, 56, 16)",
+            "0"
+          ],
+          [
+            "12 (Conv2D)",
+            "(1, 56, 56, 128)",
+            "18432"
+          ],
+          [
+            "13 (BatchNormalization)",
+            "(1, 56, 56, 128)",
+            "512"
+          ],
+          [
+            "14 (LeakyReLU)",
+            "(1, 56, 56, 128)",
+            "0"
+          ],
+          [
+            "15 (Conv2D)",
+            "(1, 56, 56, 16)",
+            "2048"
+          ],
+          [
+            "16 (BatchNormalization)",
+            "(1, 56, 56, 16)",
+            "64"
+          ],
+          [
+            "17 (LeakyReLU)",
+            "(1, 56, 56, 16)",
+            "0"
+          ],
+          [
+            "18 (Conv2D)",
+            "(1, 56, 56, 128)",
+            "18432"
+          ],
+          [
+            "19 (BatchNormalization)",
+            "(1, 56, 56, 128)",
+            "512"
+          ],
+          [
+            "20 (LeakyReLU)",
+            "(1, 56, 56, 128)",
+            "0"
+          ],
+          [
+            "21 (MaxPooling2D)",
+            "(1, 28, 28, 128)",
+            "0"
+          ],
+          [
+            "22 (Conv2D)",
+            "(1, 28, 28, 32)",
+            "4096"
+          ],
+          [
+            "23 (BatchNormalization)",
+            "(1, 28, 28, 32)",
+            "128"
+          ],
+          [
+            "24 (LeakyReLU)",
+            "(1, 28, 28, 32)",
+            "0"
+          ],
+          [
+            "25 (Conv2D)",
+            "(1, 28, 28, 256)",
+            "73728"
+          ],
+          [
+            "26 (BatchNormalization)",
+            "(1, 28, 28, 256)",
+            "1024"
+          ],
+          [
+            "27 (LeakyReLU)",
+            "(1, 28, 28, 256)",
+            "0"
+          ],
+          [
+            "28 (Conv2D)",
+            "(1, 28, 28, 32)",
+            "8192"
+          ],
+          [
+            "29 (BatchNormalization)",
+            "(1, 28, 28, 32)",
+            "128"
+          ],
+          [
+            "30 (LeakyReLU)",
+            "(1, 28, 28, 32)",
+            "0"
+          ],
+          [
+            "31 (Conv2D)",
+            "(1, 28, 28, 256)",
+            "73728"
+          ],
+          [
+            "32 (BatchNormalization)",
+            "(1, 28, 28, 256)",
+            "1024"
+          ],
+          [
+            "33 (LeakyReLU)",
+            "(1, 28, 28, 256)",
+            "0"
+          ],
+          [
+            "34 (MaxPooling2D)",
+            "(1, 14, 14, 256)",
+            "0"
+          ],
+          [
+            "35 (Conv2D)",
+            "(1, 14, 14, 64)",
+            "16384"
+          ],
+          [
+            "36 (BatchNormalization)",
+            "(1, 14, 14, 64)",
+            "256"
+          ],
+          [
+            "37 (LeakyReLU)",
+            "(1, 14, 14, 64)",
+            "0"
+          ],
+          [
+            "38 (Conv2D)",
+            "(1, 14, 14, 512)",
+            "294912"
+          ],
+          [
+            "39 (BatchNormalization)",
+            "(1, 14, 14, 512)",
+            "2048"
+          ],
+          [
+            "40 (LeakyReLU)",
+            "(1, 14, 14, 512)",
+            "0"
+          ],
+          [
+            "41 (Conv2D)",
+            "(1, 14, 14, 64)",
+            "32768"
+          ],
+          [
+            "42 (BatchNormalization)",
+            "(1, 14, 14, 64)",
+            "256"
+          ],
+          [
+            "43 (LeakyReLU)",
+            "(1, 14, 14, 64)",
+            "0"
+          ],
+          [
+            "44 (Conv2D)",
+            "(1, 14, 14, 512)",
+            "294912"
+          ],
+          [
+            "45 (BatchNormalization)",
+            "(1, 14, 14, 512)",
+            "2048"
+          ],
+          [
+            "46 (LeakyReLU)",
+            "(1, 14, 14, 512)",
+            "0"
+          ],
+          [
+            "47 (Conv2D)",
+            "(1, 14, 14, 128)",
+            "65536"
+          ],
+          [
+            "48 (BatchNormalization)",
+            "(1, 14, 14, 128)",
+            "512"
+          ],
+          [
+            "49 (LeakyReLU)",
+            "(1, 14, 14, 128)",
+            "0"
+          ],
+          [
+            "50 (Conv2D)",
+            "(1, 14, 14, 1000)",
+            "129000"
+          ],
+          [
+            "51 (AveragePooling2D)",
+            "(1, 1, 1, 1000)",
+            "0"
+          ],
+          [
+            "52 (Flatten)",
+            "(1, 1000)",
+            "0"
+          ],
+          [
+            "53 (Softmax)",
+            "(1, 1000)",
+            "0"
+          ]
+        ]
+      },
+      "comment": {
+        "Total params": "1,046,488",
+        "Trainable params": "1,037,720",
+        "Non-trainable params": "8,768"
+      }
+    },
+    "html": {
+      "EN": [
+        "It consists only of convolution layers without fully connected layers and a batch normalization layer<a class='super' href='#footnote-batch-normalization'>[3]</a> is attached after the convolution layer.",
+        "reduced the resolution twice by max pooling and reduced the resolution to 1x1 through Average pooling in front of the softmax layer.",
+        "activation functions of all layers are Lecky ReLU."
+      ],
+      "KO": [
+        "Fully connected layer없이 Convolution layer로만 구성되어 있고 Convolution layer 뒤에 batch normalization layer<a class='super' href='#footnote-batch-normalization'>[3]</a>를 붙였다.",
+        "Max pooling으로 resolution을 두배씩 줄였으며 softmax layer앞에서 Average pooling을 통해 resolution을 1x1로 줄였다.",
+        "activation Function은 모든 레이어에 Lecky ReLU를 사용하였다."
+      ]
+    }
+  },
+  "training": {
+    "name": "Training",
+    "tag": "convert darknet to tfjs model",
+    "html": {
+      "EN": [
+        "Learning was not done directly and both the model structure and weight used Tiny Darknet. For more information, see <a href='https://pjreddie.com/darknet/tiny-darknet/'>https://pjreddie.com/darknet/tiny-darknet/</a>.",
+        "<table><thead><tr><th>Model</th><th>Top-1</th><th>Top-5</th><th>Ops</th><th>Size</th></tr></thead><tbody><tr><td>AlexNet</td><td>57.0</td><td>80.3</td><td>2.27Bn</td><td>238MB</td></tr><tr><td>Darknet Reference</td><td><b>61.1</b></td><td><b>83.0</b></td><td><b>0.81Bn</b></td><td>28MB</td></tr><tr><td>SqueezeNet</td><td>57.5</td><td>80.3</td><td>2.17Bn</td><td>4.8MB</td></tr><tr><td style='color:red;font-weight:bold'>Tiny Darknet</td><td>58.7</td><td>81.7</td><td>0.98Bn</td><td><b>4.0MB</b></td></tr></tbody></table>",
+        "Top-1 is supposed by correct when the highest predicted class is the ground-truth class, and Top-5 is supposed by correct when the ground-truth class is included in the five predicted high probability classes. accuracy is caculated as correct samples divided by all.",
+        "Tiny Darknet is a very efficient model with a slight loss of accuracy but noticeably reduced speed and model size",
+        "you can confirm darknet<i>(only classify model)</i> to keras model conversion code in <a href='https://github.com/whwnsdlr1/tensorflow.js-classification-example/blob/master/train/imagenet/convert.py'>convert.py</a>"
+      ],
+      "KO": [
+        "학습은 직접하지 않았고 모델 구조 및 weight 모두 Tiny Darknet을 사용하였다. 자세한 내용은 <a href='https://pjreddie.com/darknet/tiny-darknet/'>https://pjreddie.com/darknet/tiny-darknet/</a>에서 볼 수 있다.",
+        "<table><thead><tr><th>Model</th><th>Top-1</th><th>Top-5</th><th>Ops</th><th>Size</th></tr></thead><tbody><tr><td>AlexNet</td><td>57.0</td><td>80.3</td><td>2.27Bn</td><td>238MB</td></tr><tr><td>Darknet Reference</td><td><b>61.1</b></td><td><b>83.0</b></td><td><b>0.81Bn</b></td><td>28MB</td></tr><tr><td>SqueezeNet</td><td>57.5</td><td>80.3</td><td>2.17Bn</td><td>4.8MB</td></tr><tr><td style='color:red;font-weight:bold'>Tiny Darknet</td><td>58.7</td><td>81.7</td><td>0.98Bn</td><td><b>4.0MB</b></td></tr></tbody></table>",
+        "Top-1는 예측한 가장 높은 확률의 클래스가 정답 클래스일 때, Top-5는 예측한 상위 확률 5개의 클래스 안에 정답 클래스가 포함 될 때 맞춘 것이라고 보고 accuracy를 측정한 것이다.",
+        "Tiny Darknet의 경우 약간의 accuracy 손실을 감수하고 속도와 모델의 크기를 눈에 띄게 줄인 효율성이 좋은 모델이다.",
+        "darknet<i>(only classify model)</i> to keras model 변환 코드는 <a href='https://github.com/whwnsdlr1/tensorflow.js-classification-example/blob/master/train/imagenet/convert.py'>convert.py</a>에서 확인 할 수 있다."
+      ]
+    }
+  },
+  "footnote": ["Softmax function", "Grad-CAM", "Batch normalization"]
+}

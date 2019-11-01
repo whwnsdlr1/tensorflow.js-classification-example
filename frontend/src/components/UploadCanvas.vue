@@ -19,7 +19,7 @@
 /* eslint-disable no-console */
 
 export default {
-  props: ['width', 'tool-height', 'canvas-height', 'layer-msg'],
+  props: ['align-method', 'width', 'tool-height', 'canvas-height', 'layer-msg'],
   data: function () {
     return {
       mouseEntered: false
@@ -46,7 +46,7 @@ export default {
               let tempContext = tempCanvas.getContext('2d')
               tempContext.drawImage(img, 0, 0, img.naturalWidth, img.naturalHeight)
               const imageData = tempContext.getImageData(0, 0, img.naturalWidth, img.naturalHeight)
-              context.putImageData(Vue.getLetterboxImage(imageData, Vue.width, Vue.canvasHeight), 0, 0)
+              context.putImageData(Vue.alignImage(imageData, Vue.width, Vue.canvasHeight), 0, 0)
             }
             img.src = dataUrl
           }
@@ -79,7 +79,7 @@ export default {
       copyContext2.drawImage(canvasCopy, 0, 0, canvasCopy.width, canvasCopy.height, 0, 0, canvasCopy2.width, canvasCopy2.height)
       return copyContext2.getImageData(0, 0, dstWidth, dstHeight).data
     },
-    getLetterboxImage: function (im, w, h) {
+    alignLetterboxImage: function (im, w, h) {
       let newW, newH
       if (w / im.width < h / im.height) {
         newW = w
@@ -119,6 +119,10 @@ export default {
       }
       return new ImageData(boxed, w, h)
     },
+    alignDefaultImage: function (im, w, h) {
+      let resized = this.resizeImg(im.data, im.width, im.height, w, h)
+      return new ImageData(resized, w, h)
+    },
     uploadCanvas: function () {
       let canvas = this.$refs['canvas']
       let context = canvas.getContext('2d', {alpha: false})
@@ -129,6 +133,14 @@ export default {
       let canvas = this.$refs['canvas']
       let context = canvas.getContext('2d', {alpha: false})
       return context.getImageData(0, 0, context.canvas.width, context.canvas.height)
+    }
+  },
+  computed: {
+    alignImage: function () {
+      if (this.alignMethod == 'letterbox')
+        return this.alignLetterboxImage
+      else
+        return this.alignDefaultImage
     }
   },
   mounted () {

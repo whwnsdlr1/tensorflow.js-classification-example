@@ -1,5 +1,4 @@
 ﻿import json
-import os
 import tensorflow as tf
 import re
 import struct
@@ -167,9 +166,9 @@ def convert (cfg_path, weight_path):
     
 
 if __name__ == '__main__':
-  cfg_path = r'C:\Projects\tensorflow.js-classification-example\train\darknet_tiny\tiny.cfg'
-  weights_path = r'C:\Projects\tensorflow.js-classification-example\train\darknet_tiny\tiny.weights'
-  output_tensorflowjs_model_path = r'..\..\frontend\public\darknet_tiny'
+  cfg_path = r'C:\Projects\tensorflow.js-classification-example\train\imagenet\tiny.cfg'
+  weights_path = r'C:\Projects\tensorflow.js-classification-example\train\imagenet\tiny.weights'
+  output_tensorflowjs_model_path = r'..\..\frontend\public\imagenet'
   test_image_path = r'C:\Users\jijo\Documents\eagle.jpg'
 
   model = convert(cfg_path, weights_path)

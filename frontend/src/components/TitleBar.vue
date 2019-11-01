@@ -7,6 +7,12 @@
       </div>
       <span>MNIST</span>
     </div>
+    <div :class="{active: page == '/cifar'}" @click="() => {this.$emit('vue-move', '/cifar')}">
+      <div class="wcheck">
+        <img v-show="page == '/cifar'" class="check" src="@/assets/icons/outline_done_white_24dp.png" />
+      </div>
+      <span>CIFAR</span>
+    </div>
     <div :class="{active: page == '/imagenet'}" @click="() => {this.$emit('vue-move', '/imagenet')}">
       <div class="wcheck">
         <img v-show="page == '/imagenet'" class="check" src="@/assets/icons/outline_done_white_24dp.png" />
@@ -15,6 +21,7 @@
     </div>
   </div>
   <div class="buttons">
+    <div class="btn" title="change language" @click="listen__lang__onclick"><span>{{ lang == 'EN' ? 'KO' : 'EN' }}</span></div>
     <a href="https://github.com/whwnsdlr1/tensorflow.js-classification-example" style="line-height:0"><img class="btn github" src="@/assets/icons/GitHub-Mark-Light-32px.png" title="github"/></a>
     <img v-show="fullscreen == false" class="btn" src="@/assets/icons/outline_fullscreen_white_24dp.png" title="maxmize" @click="listen__fullscreen__onclick" />
     <img v-show="fullscreen == true" class="btn" src="@/assets/icons/outline_fullscreen_exit_white_24dp.png" title="minimize" @click="listen__fullscreen__onclick" />
@@ -27,7 +34,7 @@
 /* eslint-disable no-console */
 import MISC from '@/js/miscellaneous.js'
 export default {
-  props: ['page'],
+  props: ['page', 'lang'],
   data: function () {
     return {
       fullscreen: false
@@ -78,6 +85,9 @@ export default {
         }
         this.fullscreen = true
       }
+    },
+    listen__lang__onclick: function () {
+      this.$emit('vue-lang-tochange', {})
     }
   },
   mounted () {
@@ -114,7 +124,7 @@ div.body * {
   flex-direction: row;
   height: 100%;
   align-items: center;
-  padding: 3px 0px;
+  padding: 3px 5px;
   margin: 0px;
 }
 .dataset > div.active {
@@ -140,8 +150,10 @@ div.body * {
   border-top-left-radius: 9px;
   border-bottom-left-radius: 9px;
 }
-.dataset > div:last-child {
+.dataset > div:not(:first-child) {
   border-left: 1px solid rgb(0, 0, 0);
+}
+.dataset > div:last-child {
   padding-left: 5px;
   padding-right: 10px;
   border-top-right-radius: 9px;
@@ -177,20 +189,28 @@ div.body * {
   height: 100%;
   align-items: center;
 }
-img.btn {
+.buttons .btn {
   width: 24px;
   height: 24px;
   cursor: pointer;
   border-radius: 3px;
   border: 1px solid rgb(36, 41, 46);
   margin-right: 5px;
+  color: white;
 }
-img.btn.github {
+.buttons div.btn {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+.buttons .btn.github {
   width: 20px;
   height: 20px;
   padding: 3px;
 }
-img.btn:hover {
+.buttons .btn:hover {
   background: rgb(80, 80, 80);
   border: 1px solid rgb(150, 150, 150);
 }

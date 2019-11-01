@@ -1,0 +1,189 @@
+{
+  "Convolution layer": {
+    "id": "footnote-convolution-layer",
+    "group": "layer",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "Fully connected layer": {
+    "id": "footnote-fully-connected-layer",
+    "group": "layer",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "Max pooling": {
+    "id": "footnote-max-pooling",
+    "group": "layer",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "Average pooling": {
+    "id": "footnote-average-pooling",
+    "group": "layer",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "Batch normalization": {
+    "id": "footnote-batch-normalization",
+    "group": "layer",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "Drop out": {
+    "id": "footnote-drop-out",
+    "group": "layer",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "He normal": {
+    "id": "footnote-he-normal",
+    "group": "initializer",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "Softmax function": {
+    "id": "footnote-softmax",
+    "group": "activation",
+    "html": {
+      "EN": [
+        "<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/bdc1f8eaa8064d15893f1ba6426f20ff8e7149c5' />",
+        ""
+      ],
+      "KO": [
+        "<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/bdc1f8eaa8064d15893f1ba6426f20ff8e7149c5' />",
+        ""
+      ]
+    }
+  },
+  "ReLU": {
+    "id": "footnote-relu",
+    "group": "activation",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "Leaky ReLU": {
+    "id": "footnote-leaky-relu",
+    "group": "activation",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "Cross entropy": {
+    "id": "footnote-cross-entropy",
+    "group": "loss",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "SGD": {
+    "id": "footnote-sgd",
+    "group": "optimizer",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "Adam": {
+    "id": "footnote-adam",
+    "group": "optimizer",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "Momentum": {
+    "id": "footnote-momentum",
+    "group": "optimizer",
+    "html": {
+      "EN": [
+        ""
+      ],
+      "KO": [
+        ""
+      ]
+    }
+  },
+  "Grad-CAM": {
+    "id": "footnote-grad-cam",
+    "group": "visual explanation",
+    "html": {
+      "EN": [
+        "Gradient-weighted Class Activation Mapping",
+        "ML models can be used as black boxes, but detailed tuning requires understanding.",
+        "In particular, for the classification problem, it is necessary to identify what the model sees and determines such a decision.",
+        "Methods for procuring these 'visual explains' include occlusion map, Guided-Backpropagation, CAM, Grad-CAM etc. and in the case of the Grad-CAM, no structural changes and re-learning are required and the areas referred to are expressed to make a judgment."
+      ],
+      "KO": [
+        "ML model은 블랙박스로 사용할 수 있지만 세밀한 튜닝을 위해서는 이해가 필요하다.",
+        "특히 분류 문제의 경우 모델이 도대체 무엇을 보고 그런 결정을 내리는지 확인 할 필요가 있다.",
+        "이런 'visual explanations'을 생성하는 방법은 occlusion map, Guided-Backpropagation, CAM, Grad-CAM등이 있으며 Grad-CAM의 경우 구조변경과 재학습 없이 판단을 내리기 위해 참고한 영역을 표현 할 수 있다."
+      ]
+    }
+  }
+}

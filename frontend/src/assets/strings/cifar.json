@@ -1,0 +1,261 @@
+{
+  "trainingData": {
+    "name": "CIFAR-100",
+    "tag": "training-data",
+    "html": {
+      "EN": [
+        "<img src='/cifar/cifar.png' />",
+        "",
+        "<a href='https://www.cs.toronto.edu/~kriz/cifar.html'>CIFAR-100 dataset</a> is subset of <a href='http://groups.csail.mit.edu/vision/TinyImages/'>80 million tiny images</a> and consists of 60000 32x32 Color images, of which 50000 are training and the remaining 10000 are test data.",
+        "Each image belongs to one of 100 classes and there are 600 images in each class. 100 classes have 20 super classes, and the class names are shown in the table below.",
+        "<table><thead><tr><th>Superclass</th><th>Classes</th></tr></thead><tbody>",
+        "<tr><td>aquatic mammals</td><td>beaver, dolphin, otter, seal, whale</td></tr>",
+        "<tr><td>fish</td><td>aquarium fish, flatfish, ray, shark, trout</td></tr>",
+        "<tr><td>flowers</td><td>orchids, poppies, roses, sunflowers, tulips</td></tr>",
+        "<tr><td>food containers</td><td>bottles, bowls, cans, cups, plates</td></tr>",
+        "<tr><td>fruit and vegetables</td><td>apples, mushrooms, oranges, pears, sweet peppers</td></tr>",
+        "<tr><td>household electrical devices</td><td>clock, computer keyboard, lamp, telephone, television</td></tr>",
+        "<tr><td>household furniture</td><td>bed, chair, couch, table, wardrobe</td></tr>",
+        "<tr><td>insects</td><td>bee, beetle, butterfly, caterpillar, cockroach</td></tr>",
+        "<tr><td>large carnivores</td><td>bear, leopard, lion, tiger, wolf</td></tr>",
+        "<tr><td>large man-made outdoor things</td><td>bridge, castle, house, road, skyscraper</td></tr>",
+        "<tr><td>large natural outdoor scenes</td><td>cloud, forest, mountain, plain, sea</td></tr>",
+        "<tr><td>large omnivores and herbivores</td><td>camel, cattle, chimpanzee, elephant, kangaroo</td></tr>",
+        "<tr><td>medium-sized mammals</td><td>fox, porcupine, possum, raccoon, skunk</td></tr>",
+        "<tr><td>non-insect invertebrates</td><td>crab, lobster, snail, spider, worm</td></tr>",
+        "<tr><td>people</td><td>baby, boy, girl, man, woman</td></tr>",
+        "<tr><td>reptiles</td><td>crocodile, dinosaur, lizard, snake, turtle</td></tr>",
+        "<tr><td>small mammals</td><td>hamster, mouse, rabbit, shrew, squirrel</td></tr>",
+        "<tr><td>trees</td><td>maple, oak, palm, pine, willow</td></tr>",
+        "<tr><td>vehicles 1</td><td>bicycle, bus, motorcycle, pickup truck, train</td></tr>",
+        "<tr><td>vehicles 2</td><td>lawn-mower, rocket, streetcar, tank, tractor</td></tr>",
+        "<tbody></table>",
+        "<a href='https://arxiv.org/pdf/1905.11946v2.pdf'>EfficientNet: Rethinking Model Scailing for Convolutional Neural Networks</a>, released in 2019, showed a 91.7% SOTA accuracy."
+      ],
+      "KO": [
+        "<img src='/cifar/cifar.png' />",
+        "",
+        "<a href='https://www.cs.toronto.edu/~kriz/cifar.html'>CIFAR-100 dataset</a>은 <a href='http://groups.csail.mit.edu/vision/TinyImages/'>80 million tiny images</a>의 하위 dataset으로 60000장의 32x32 Color image로 구성되어 있으며 이 중 50000장은 학습, 나머지 10000장은 테스트데이터이다.",
+        "각 이미지는 100개의 클래스 중 하나에 속하며 각 클래스 당 600개의 이미지가 존재한다. 100개의 클래스는 20개의 상위 클래스가 있으며 클래스명은 아래 테이블과 같다.",
+        "<table><thead><tr><th>Superclass</th><th>Classes</th></tr></thead><tbody>",
+        "<tr><td>aquatic mammals</td><td>beaver, dolphin, otter, seal, whale</td></tr>",
+        "<tr><td>fish</td><td>aquarium fish, flatfish, ray, shark, trout</td></tr>",
+        "<tr><td>flowers</td><td>orchids, poppies, roses, sunflowers, tulips</td></tr>",
+        "<tr><td>food containers</td><td>bottles, bowls, cans, cups, plates</td></tr>",
+        "<tr><td>fruit and vegetables</td><td>apples, mushrooms, oranges, pears, sweet peppers</td></tr>",
+        "<tr><td>household electrical devices</td><td>clock, computer keyboard, lamp, telephone, television</td></tr>",
+        "<tr><td>household furniture</td><td>bed, chair, couch, table, wardrobe</td></tr>",
+        "<tr><td>insects</td><td>bee, beetle, butterfly, caterpillar, cockroach</td></tr>",
+        "<tr><td>large carnivores</td><td>bear, leopard, lion, tiger, wolf</td></tr>",
+        "<tr><td>large man-made outdoor things</td><td>bridge, castle, house, road, skyscraper</td></tr>",
+        "<tr><td>large natural outdoor scenes</td><td>cloud, forest, mountain, plain, sea</td></tr>",
+        "<tr><td>large omnivores and herbivores</td><td>camel, cattle, chimpanzee, elephant, kangaroo</td></tr>",
+        "<tr><td>medium-sized mammals</td><td>fox, porcupine, possum, raccoon, skunk</td></tr>",
+        "<tr><td>non-insect invertebrates</td><td>crab, lobster, snail, spider, worm</td></tr>",
+        "<tr><td>people</td><td>baby, boy, girl, man, woman</td></tr>",
+        "<tr><td>reptiles</td><td>crocodile, dinosaur, lizard, snake, turtle</td></tr>",
+        "<tr><td>small mammals</td><td>hamster, mouse, rabbit, shrew, squirrel</td></tr>",
+        "<tr><td>trees</td><td>maple, oak, palm, pine, willow</td></tr>",
+        "<tr><td>vehicles 1</td><td>bicycle, bus, motorcycle, pickup truck, train</td></tr>",
+        "<tr><td>vehicles 2</td><td>lawn-mower, rocket, streetcar, tank, tractor</td></tr>",
+        "<tbody></table>",
+        "2019년 발표된 <a href='https://arxiv.org/pdf/1905.11946v2.pdf'>EfficientNet: Rethinking Model Scailing for Convolutional Neural Networks</a>의 실험 결과에서 91.7%의 SOTA accuracy를 얻었다."
+      ]
+    }
+  },
+  "archetecture": {
+    "name": "Custom-CNN",
+    "tag": "network archetecture",
+    "data": {
+      "table": {
+        "head": [
+          "Layer (type)",
+          "Output Shape",
+          "Param #"
+        ],
+        "body": [
+          [
+            "0 (InputLayer)",
+            "[(None, 32, 32, 3)]",
+            "0"
+          ],
+          [
+            "1 (Conv2D)",
+            "(None, 32, 32, 16)",
+            "64"
+          ],
+          [
+            "2 (LeakyReLU)",
+            "(None, 32, 32, 16)",
+            "0"
+          ],
+          [
+            "3 (Conv2D)",
+            "(None, 32, 32, 16)",
+            "2320"
+          ],
+          [
+            "4 (LeakyReLU)",
+            "(None, 32, 32, 16)",
+            "0"
+          ],
+          [
+            "5 (Conv2D)",
+            "(None, 32, 32, 64)",
+            "1088"
+          ],
+          [
+            "6 (LeakyReLU)",
+            "(None, 32, 32, 64)",
+            "0"
+          ],
+          [
+            "7 (MaxPooling2D)",
+            "(None, 16, 16, 64)",
+            "0"
+          ],
+          [
+            "8 (Conv2D)",
+            "(None, 16, 16, 32)",
+            "2080"
+          ],
+          [
+            "9 (LeakyReLU)",
+            "(None, 16, 16, 32)",
+            "0"
+          ],
+          [
+            "10 (Conv2D)",
+            "(None, 16, 16, 32)",
+            "9248"
+          ],
+          [
+            "11 (LeakyReLU)",
+            "(None, 16, 16, 32)",
+            "0"
+          ],
+          [
+            "12 (Conv2D)",
+            "(None, 16, 16, 128)",
+            "4224"
+          ],
+          [
+            "13 (LeakyReLU)",
+            "(None, 16, 16, 128)",
+            "0"
+          ],
+          [
+            "14 (MaxPooling2D)",
+            "(None, 8, 8, 128)",
+            "0"
+          ],
+          [
+            "15 (Conv2D)",
+            "(None, 8, 8, 64)",
+            "8256"
+          ],
+          [
+            "16 (LeakyReLU)",
+            "(None, 8, 8, 64)",
+            "0"
+          ],
+          [
+            "17 (Conv2D)",
+            "(None, 8, 8, 64)",
+            "36928"
+          ],
+          [
+            "18 (LeakyReLU)",
+            "(None, 8, 8, 64)",
+            "0"
+          ],
+          [
+            "19 (Conv2D)",
+            "(None, 8, 8, 256)",
+            "16640"
+          ],
+          [
+            "20 (LeakyReLU)",
+            "(None, 8, 8, 256)",
+            "0"
+          ],
+          [
+            "21 (AveragePooling2D)",
+            "(None, 1, 1, 256)",
+            "0"
+          ],
+          [
+            "22 (Flatten)",
+            "(None, 256)",
+            "0"
+          ],
+          [
+            "23 (Dropout)",
+            "(None, 256)",
+            "0"
+          ],
+          [
+            "24 (Dense)",
+            "(None, 512)",
+            "131584"
+          ],
+          [
+            "25 (Dense)",
+            "(None, 100)",
+            "51300"
+          ]
+        ]
+      },
+      "comment": {
+        "Total params": "263,732",
+        "Trainable params": "263,732",
+        "Non-trainable params": "0"
+      }
+    },
+    "html": {
+      "EN": [
+        "It is a simple convolutional neural network consisting of convolution layers, fully connected layers and maxpoolings.",
+        "He normal initializer<a class='super' href='#footnote-he-normal'>[4]</a> is used to initialize kernel weight of convolution layers.",
+        "Added a Drop-out layer<a class='super' href='#footnote-drop-out'>[3]</a><i>(Drop rate=0.5)</i> between the convolution layer and the fully connected layer.",
+        "activation functions of all layers are Lecky ReLU<a class='super' href='#footnote-relu'>[5]</a>."
+      ],
+      "KO": [
+        "Convolution Layer, Fully connected layer와 MaxPooling으로 이루어진 간단한 Convolutional neural network이다.",
+        "Convolution Layer의 kernel weight 초기화에는 He normal initializer<a class='super' href='#footnote-he-normal'>[4]</a>를 사용하였다.",
+        "Convolution Layer와 Fully connected layer사이에 Drop-out layer<a href='footnote-drop-out'>[3]</a><i>(Drop rate=0.5)</i>를 추가하였다.",
+        "Activation Function은 모든 레이어에 Leaky ReLU<a class='super' href='#footnote-relu'>[5]</a>를 사용하였다."
+      ]
+    }
+  },
+  "training": {
+    "name": "Training",
+    "tag": "tuning & learning",
+    "html": {
+      "EN": [
+        "training python script can be find in <a href='https://github.com/whwnsdlr1/tensorflow.js-classification-example/blob/master/train/cifar/train.py'>train.py</a>",
+        "It has divided again training data into 40000 images of real training data and 10000 images of verification data.",
+        "trained with the following hyperparameters and stored the model with the lowest loss for the validation data.",
+        "&nbsp;&nbsp;optimizer: SGD<a class='super' href='#footnote-sgd'>[5]</a> with momentum<a class='super' href='#footnote-momentum'>[6]</a> 0.9",
+        "&nbsp;&nbsp;loss: cross-entropy",
+        "&nbsp;&nbsp;learning-rate: 0.001",
+        "&nbsp;&nbsp;batch-size: 32",
+        "&nbsp;&nbsp;epochs: 500 // but with early stoppping, train process stopped at epoch-199",
+        "titan Xp / tensorflow 2.0 were used to train and took twenty nine minutes.",
+        "The training / validation / test accuracy of the final model was 0.7091 / 0.4853 / 0.4985."
+      ],
+      "KO": [
+        "학습 코드는 <a href='https://github.com/whwnsdlr1/tensorflow.js-classification-example/blob/master/train/cifar/train.py'>train.py</a>에서 찾을 수 있다.",
+        "50000장의 학습 데이터를 다시 40000장과 10000장의 학습, 검증 데이터로 나눴다.",
+        "아래의 하이퍼파리미터로 학습 하였고 검증 데이터에 대해서 가장 높은 accuracy를 가지는 epoch 시점의 모델을 저장하였다.",
+        "&nbsp;&nbsp;optimizer: SGD<a class='super' href='#footnote-sgd'>[5]</a> with momentum<a class='super' href='#footnote-momentum'>[6]</a> 0.9",
+        "&nbsp;&nbsp;loss: cross-entropy",
+        "&nbsp;&nbsp;learning-rate: 0.001",
+        "&nbsp;&nbsp;batch-size: 32",
+        "&nbsp;&nbsp;epochs: 500 // but with early stoppping, train process stopped at epoch-199",
+        "학습에는 titan Xp / tensorflow 2.0이 사용하였고 29분이 소요되었다.",
+        "최종 모델의 학습 / 검증 / 테스트 accuracy는 0.7091 / 0.4853 / 0.4985였다."
+      ]
+    }
+  },
+  "footnote": ["Softmax function", "Grad-CAM", "Drop out", "He normal", "Leaky ReLU", "SGD", "Momentum"]
+}

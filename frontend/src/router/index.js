@@ -8,6 +8,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     { path: '/tensorflow.js-classification-example/mnist', component: Main },
+    { path: '/tensorflow.js-classification-example/cifar', component: Main },
     { path: '/tensorflow.js-classification-example/imagenet', component: Main },
     { path: '*', component: Index }
   ],
